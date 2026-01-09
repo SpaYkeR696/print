@@ -1,8 +1,8 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "devCommand": "npm run dev",
-  "framework": "vite",
+  "outputDirectory": "build",
+  "devCommand": "npm start",
+  "framework": "create-react-app",
   "rewrites": [
     {
       "source": "/(.*)",

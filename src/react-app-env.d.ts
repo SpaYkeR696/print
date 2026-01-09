@@ -1,4 +1,4 @@
-/// <reference types="vite/client" />
+/// <reference types="react-scripts" />
 
 declare module '*.jpg' {
   const src: string;
