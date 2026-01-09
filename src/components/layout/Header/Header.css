@@ -1,0 +1,125 @@
+.header {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  transition: opacity 0.3s;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo-text {
+  background: linear-gradient(90deg, var(--text-primary), #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #ff6b6b;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff6b6b;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-phone {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.header-phone:hover {
+  color: #ff6b6b;
+}
+
+.telegram-link-header {
+  display: flex;
+  align-items: center;
+  color: #0088cc;
+  transition: opacity 0.3s;
+}
+
+.telegram-link-header:hover {
+  opacity: 0.8;
+}
+
+.telegram-link-header svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}

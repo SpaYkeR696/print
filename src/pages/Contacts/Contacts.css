@@ -1,0 +1,128 @@
+.contacts {
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.contacts-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contact-info-panel {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contact-address {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.contact-email {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.contact-phone-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-phone {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.telegram-link {
+  display: flex;
+  align-items: center;
+  color: #0088cc;
+  transition: opacity 0.3s;
+}
+
+.telegram-link:hover {
+  opacity: 0.8;
+}
+
+.telegram-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+.schedule-time {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.map-panel {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 500px;
+  min-height: 500px;
+  transition: background-color 0.3s;
+}
+
+.yandex-map {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+
+@media (max-width: 968px) {
+  .contacts-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .map-panel {
+    height: 400px;
+    min-height: 400px;
+  }
+}
