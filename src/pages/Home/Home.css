@@ -14,6 +14,30 @@
   padding: 0 2rem;
 }
 
+.hero-gif-section {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-gif-section .container {
+  max-width: 100%;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-gif {
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .services-section {
   padding: 4rem 0;
   min-height: calc(100vh - 200px);

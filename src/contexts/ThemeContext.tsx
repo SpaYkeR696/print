@@ -38,6 +38,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     } else {
       updateTheme();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme]);
 
   useEffect(() => {
