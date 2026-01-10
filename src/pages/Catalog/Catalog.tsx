@@ -10,59 +10,87 @@ const Catalog = () => {
       id: 1,
       title: "Печать на текстиле",
       illustration: "print",
-      link: "/services/print",
+      link: "/services/textile",
     },
     {
       id: 2,
       title: "Печать на ПВД пакетах",
       illustration: "sell",
-      link: "/services/sell",
+      link: "/services/pvd",
     },
     {
       id: 3,
       title: "Печать на зиплоках",
       illustration: "sew",
-      link: "/services/sew",
+      link: "/services/ziplock",
     },
   ];
 
   return (
     <div className="services-page">
       <div className="container">
-        {services.map((service) => (
-          <div key={service.id} className="service-section">
+        <div className="service-container">
+          <div className="service-wrapper">
             <div className="service-left">
               <div className="service-illustration">
-                {service.illustration === "print" ? (
-                  <img
-                    src={textileImage}
-                    alt="Печать на текстиле"
-                    className="service-image"
-                  />
-                ) : service.illustration === "sell" ? (
-                  <img
-                    src={pvdImage}
-                    alt="Печать на ПВД пакетах"
-                    className="service-image"
-                  />
-                ) : (
-                  <img
-                    src={ziplockImage}
-                    alt="Печать на зиплоках"
-                    className="service-image"
-                  />
-                )}
+                <img
+                  src={textileImage}
+                  alt="Печать на текстиле"
+                  className="service-image"
+                />
               </div>
-              <h2 className="service-title-left">{service.title}</h2>
+              <h2 className="service-title-left">Печать на текстиле</h2>
             </div>
             <div className="service-right">
               <div className="service-divider"></div>
-              <Link to={service.link} className="service-details-btn">
+              <Link to="/services/textile" className="service-details-btn">
                 Подробнее
               </Link>
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className="service-container">
+          <div className="service-wrapper">
+            <div className="service-left">
+              <div className="service-illustration">
+                <img
+                  src={pvdImage}
+                  alt="Печать на ПВД пакетах"
+                  className="service-image"
+                />
+              </div>
+              <h2 className="service-title-left">Печать на ПВД пакетах</h2>
+            </div>
+            <div className="service-right">
+              <div className="service-divider"></div>
+              <Link to="/services/pvd" className="service-details-btn">
+                Подробнее
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="service-container">
+          <div className="service-wrapper">
+            <div className="service-left">
+              <div className="service-illustration">
+                <img
+                  src={ziplockImage}
+                  alt="Печать на зиплоках"
+                  className="service-image"
+                />
+              </div>
+              <h2 className="service-title-left">Печать на зиплоках</h2>
+            </div>
+            <div className="service-right">
+              <div className="service-divider"></div>
+              <Link to="/services/ziplock" className="service-details-btn">
+                Подробнее
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

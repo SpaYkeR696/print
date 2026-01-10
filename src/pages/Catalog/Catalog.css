@@ -6,7 +6,7 @@
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -14,14 +14,29 @@
   gap: 1.5rem;
 }
 
-.service-section {
-  background: #fff;
+.service-container {
   border-radius: 20px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 250px;
+  border: 2px solid #fff;
+  padding: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+[data-theme="dark"] .service-container {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .service-container {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-wrapper {
+  display: flex;
+  min-height: 250px;
+}
+
+.service-section {
+  display: none;
 }
 
 .service-left {
@@ -31,6 +46,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  flex: 1;
 }
 
 .service-illustration {
@@ -47,7 +63,7 @@
 }
 
 .service-illustration img {
-  max-width: 50%;
+  max-width: 25%;
   height: auto;
   object-fit: contain;
   border-radius: 8px;
@@ -62,14 +78,15 @@
   line-height: 1;
 }
 
-
 .service-right {
   background: #000;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
+  flex: 2;
+  border-radius: 0 20px 20px 0;
 }
 
 .service-description {
@@ -85,25 +102,27 @@
 
 .service-divider {
   position: absolute;
-  bottom: 2.2rem;
+  top: 50%;
   left: 1.5rem;
   right: 1.5rem;
   height: 1px;
   background: #fff;
   opacity: 0.3;
+  transform: translateY(-50%);
 }
 
 .service-details-btn {
   background: #fff;
   color: #000;
-  padding: 0.3rem 0.2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   transition: all 0.3s;
   display: inline-block;
-  width: 25%;
+  width: auto;
+  align-self: flex-end;
   text-align: center;
 }
 
@@ -113,12 +132,17 @@
 }
 
 @media (max-width: 968px) {
-  .service-section {
-    grid-template-columns: 1fr;
+  .service-wrapper {
+    flex-direction: column;
     min-height: auto;
   }
 
+  .service-left {
+    border-radius: 20px 20px 0 0;
+  }
+
   .service-right {
+    border-radius: 0 0 20px 20px;
     min-height: 150px;
   }
 

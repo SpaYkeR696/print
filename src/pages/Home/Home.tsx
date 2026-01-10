@@ -1,19 +1,26 @@
 import { Link } from "react-router-dom";
-import catcherGif from "../../assets/CatcherAnimation.gif";
+import catcherVideo from "../../assets/IMG_2745.MP4";
 import "./Home.css";
 
 const Home = () => {
   const services = [
-    { id: 1, description: "Печать на текстиле", link: "/catalog" },
-    { id: 2, description: "Печать на ПВД пакетах", link: "/catalog" },
-    { id: 3, description: "Печать на зиплоках", link: "/catalog" },
+    { id: 1, description: "Печать на текстиле", link: "/services/textile" },
+    { id: 2, description: "Печать на ПВД пакетах", link: "/services/pvd" },
+    { id: 3, description: "Печать на зиплоках", link: "/services/ziplock" },
   ];
 
   return (
     <div className="home">
       <section className="hero-gif-section">
         <div className="container">
-          <img src={catcherGif} alt="Animation" className="hero-gif" />
+          <video
+            src={catcherVideo}
+            className="hero-gif"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
         </div>
       </section>
       <section className="services-section">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTheme } from "../../../contexts/ThemeContext";
 import "./Footer.css";
 
@@ -42,9 +43,15 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h4 className="footer-subtitle">Наши услуги</h4>
-          <p className="footer-text">Печать на текстиле</p>
-          <p className="footer-text">Печать на ПВД пакетах</p>
-          <p className="footer-text">Печать на зиплоках</p>
+          <Link to="/services/textile" className="footer-text footer-link">
+            Печать на текстиле
+          </Link>
+          <Link to="/services/pvd" className="footer-text footer-link">
+            Печать на ПВД пакетах
+          </Link>
+          <Link to="/services/ziplock" className="footer-text footer-link">
+            Печать на зиплоках
+          </Link>
         </div>
         <div className="footer-section">
           <h4 className="footer-subtitle">Контакты</h4>
@@ -75,12 +82,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p className="footer-legal">
-          Все фото и видео материалы принадлежат владельцам сайта. Использование
-          без согласия владельцев запрещено.
-        </p>
         <p className="footer-copyright">&copy; Merchfanatix 2024</p>
-        <p className="footer-powered">Powered By RosDesk</p>
       </div>
     </footer>
   );

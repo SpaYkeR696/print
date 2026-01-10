@@ -83,6 +83,17 @@
   transition: color 0.3s;
 }
 
+.footer-link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+  display: block;
+}
+
+.footer-link:hover {
+  color: var(--text-primary);
+}
+
 .footer-address {
   margin: 0.5rem 0 0 0;
   color: var(--text-secondary);
